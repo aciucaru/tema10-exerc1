@@ -1,6 +1,7 @@
 package ro.fasttrackit.tema10exerc1.controller;
 
 import org.springframework.web.bind.annotation.*;
+import ro.fasttrackit.tema10exerc1.model.LocationEntity;
 import ro.fasttrackit.tema10exerc1.model.TrainEntity;
 import ro.fasttrackit.tema10exerc1.service.TrainService;
 
@@ -26,7 +27,8 @@ public class TrainController
     public List<TrainEntity> getAll() { return service.getAll(); }
 
     @GetMapping
-    public List<TrainEntity> getAllBy()
+    // cum trebuie sa fie argumentul pentru a putea sorta dupa o locatie anume ??
+    public List<TrainEntity> getAllBy(LocationEntity location)
     {
         return service.getAll();
     }

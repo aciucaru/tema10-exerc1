@@ -32,10 +32,12 @@ public class TrainService
 
     public List<TrainEntity> getAll() { return repository.findAll(); }
 
+
+    // cum se face un qury dupa Location ???
     public List<TrainEntity> getAllBy(LocationEntity location)
     {
         Query query = new Query();
-        query.addCriteria(Criteria.where("name").is("Eric"));
+        query.addCriteria(Criteria.where("????????").is("?????????"));
         List<User> users = mongoTemplate.find(query, User.class);
     }
 
